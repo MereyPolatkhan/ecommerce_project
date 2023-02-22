@@ -22,6 +22,10 @@ export class ProductDetailsComponent implements OnInit {
     window.alert('Your product has been added to the cart');
   }
 
+  goToKaspi(product: Product) {
+    window.open(product.link);
+  }
+
   ngOnInit() {
     // First get the product id from the current route.
     const routeParams = this.route.snapshot.paramMap;
